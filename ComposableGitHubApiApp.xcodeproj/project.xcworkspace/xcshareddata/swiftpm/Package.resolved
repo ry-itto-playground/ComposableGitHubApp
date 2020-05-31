@@ -2,6 +2,15 @@
   "object": {
     "pins": [
       {
+        "package": "StubKit",
+        "repositoryURL": "https://github.com/kateinoigakukun/StubKit.git",
+        "state": {
+          "branch": null,
+          "revision": "33c9dfa6a049840dfd082f5ebbaf434e43df6549",
+          "version": "0.1.5"
+        }
+      },
+      {
         "package": "swift-case-paths",
         "repositoryURL": "https://github.com/pointfreeco/swift-case-paths",
         "state": {

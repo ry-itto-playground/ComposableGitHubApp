@@ -14,6 +14,11 @@
 		BFA188D224833CDE007684D3 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BFA188D124833CDE007684D3 /* Preview Assets.xcassets */; };
 		BFA188D524833CDE007684D3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFA188D324833CDE007684D3 /* LaunchScreen.storyboard */; };
 		BFA188E224833E10007684D3 /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = BFA188E124833E10007684D3 /* ComposableArchitecture */; };
+		BFA188E624833F64007684D3 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA188E524833F64007684D3 /* AppState.swift */; };
+		BFA188E824833FC7007684D3 /* AppAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA188E724833FC7007684D3 /* AppAction.swift */; };
+		BFC1EAF92483AE210016DD6C /* GitHubAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC1EAF82483AE210016DD6C /* GitHubAPIClient.swift */; };
+		BFC1EAFB2483B6820016DD6C /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC1EAFA2483B6820016DD6C /* Repository.swift */; };
+		BFC1EAFE2483DBF30016DD6C /* StubKit in Frameworks */ = {isa = PBXBuildFile; productRef = BFC1EAFD2483DBF30016DD6C /* StubKit */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +30,10 @@
 		BFA188D124833CDE007684D3 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		BFA188D424833CDE007684D3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BFA188D624833CDE007684D3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BFA188E524833F64007684D3 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
+		BFA188E724833FC7007684D3 /* AppAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppAction.swift; sourceTree = "<group>"; };
+		BFC1EAF82483AE210016DD6C /* GitHubAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubAPIClient.swift; sourceTree = "<group>"; };
+		BFC1EAFA2483B6820016DD6C /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +42,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BFA188E224833E10007684D3 /* ComposableArchitecture in Frameworks */,
+				BFC1EAFE2483DBF30016DD6C /* StubKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -58,13 +68,17 @@
 		BFA188C724833CDD007684D3 /* ComposableGitHubApiApp */ = {
 			isa = PBXGroup;
 			children = (
+				BFC1EAF724837CE70016DD6C /* API */,
+				BFA188E424833F1D007684D3 /* Views */,
 				BFA188C824833CDD007684D3 /* AppDelegate.swift */,
-				BFA188CA24833CDD007684D3 /* SceneDelegate.swift */,
 				BFA188CC24833CDD007684D3 /* ContentView.swift */,
+				BFA188CA24833CDD007684D3 /* SceneDelegate.swift */,
 				BFA188CE24833CDE007684D3 /* Assets.xcassets */,
 				BFA188D324833CDE007684D3 /* LaunchScreen.storyboard */,
 				BFA188D624833CDE007684D3 /* Info.plist */,
 				BFA188D024833CDE007684D3 /* Preview Content */,
+				BFA188E524833F64007684D3 /* AppState.swift */,
+				BFA188E724833FC7007684D3 /* AppAction.swift */,
 			);
 			path = ComposableGitHubApiApp;
 			sourceTree = "<group>";
@@ -75,6 +89,22 @@
 				BFA188D124833CDE007684D3 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		BFA188E424833F1D007684D3 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		BFC1EAF724837CE70016DD6C /* API */ = {
+			isa = PBXGroup;
+			children = (
+				BFC1EAF82483AE210016DD6C /* GitHubAPIClient.swift */,
+				BFC1EAFA2483B6820016DD6C /* Repository.swift */,
+			);
+			path = API;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -95,6 +125,7 @@
 			name = ComposableGitHubApiApp;
 			packageProductDependencies = (
 				BFA188E124833E10007684D3 /* ComposableArchitecture */,
+				BFC1EAFD2483DBF30016DD6C /* StubKit */,
 			);
 			productName = ComposableGitHubApiApp;
 			productReference = BFA188C524833CDD007684D3 /* ComposableGitHubApiApp.app */;
@@ -126,6 +157,7 @@
 			mainGroup = BFA188BC24833CDD007684D3;
 			packageReferences = (
 				BFA188E024833E10007684D3 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */,
+				BFC1EAFC2483DBF30016DD6C /* XCRemoteSwiftPackageReference "StubKit" */,
 			);
 			productRefGroup = BFA188C624833CDD007684D3 /* Products */;
 			projectDirPath = "";
@@ -154,9 +186,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BFC1EAFB2483B6820016DD6C /* Repository.swift in Sources */,
 				BFA188C924833CDD007684D3 /* AppDelegate.swift in Sources */,
 				BFA188CB24833CDD007684D3 /* SceneDelegate.swift in Sources */,
+				BFC1EAF92483AE210016DD6C /* GitHubAPIClient.swift in Sources */,
+				BFA188E824833FC7007684D3 /* AppAction.swift in Sources */,
 				BFA188CD24833CDD007684D3 /* ContentView.swift in Sources */,
+				BFA188E624833F64007684D3 /* AppState.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -360,6 +396,14 @@
 				minimumVersion = 0.3.0;
 			};
 		};
+		BFC1EAFC2483DBF30016DD6C /* XCRemoteSwiftPackageReference "StubKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/kateinoigakukun/StubKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.1.5;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -367,6 +411,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = BFA188E024833E10007684D3 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */;
 			productName = ComposableArchitecture;
+		};
+		BFC1EAFD2483DBF30016DD6C /* StubKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BFC1EAFC2483DBF30016DD6C /* XCRemoteSwiftPackageReference "StubKit" */;
+			productName = StubKit;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
